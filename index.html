@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LumeScope | Trending & Favourite Wallpapers Collection</title>
+    <meta name="description"
+        content="LumeScope is your go-to wallpaper hub — explore, browse, and download trending and handpicked wallpapers for desktop and mobile in stunning HD and 4K quality.">
+    <meta name="keywords"
+        content="LumeScope, trending wallpapers, favourite wallpapers, desktop wallpapers, mobile wallpapers, HD backgrounds, 4K wallpapers, wallpaper gallery, aesthetic wallpapers">
+    <meta name="author" content="LumeScope">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lumescope.sidharthprabhu.co.in/">
+    <meta property="og:title" content="LumeScope | Trending & Favourite Wallpapers">
+    <meta property="og:description"
+        content="Discover trending and handpicked wallpapers in HD and 4K, curated for desktop and mobile devices.">
+    <meta property="og:image" content="https://lumescope.sidharthprabhu.co.in/images/social.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://lumescope.sidharthprabhu.co.in/">
+    <meta name="twitter:title" content="LumeScope | Trending & Favourite Wallpapers">
+    <meta name="twitter:description"
+        content="Explore the latest trending wallpapers and handpicked favourites in HD and 4K.">
+    <meta name="twitter:image" content="https://lumescope.sidharthprabhu.co.in/images/social.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+
+    <title>LumeScope | The Best Wallpaper Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <a href="#" class="logo">
+            <img src="/images/logo.png" style="height: 50px;" alt="LumeScope Logo">
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Wallpapers</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>The Best Wallpaper Collection</h1>
+        <p>We have some of the best minimal and aesthetic Wallpaper Collections.
+        </p>
+        <div class="cta-buttons">
+            <a href="#categories" class="btn btn-primary">
+                <i class="fas fa-images"></i> Browse Wallpapers
+            </a>
+            <a href="#featured" class="btn btn-secondary">
+                <i class="fas fa-star"></i> Featured
+            </a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="section-title">
+            <h2>Wallpaper Collection</h2>
+            <p>Wallpapers going viral on Social Media.</p>
+        </div>
+
+        <div class="category-tabs">
+            <button class="tab-btn active" data-tab="desktop">Desktop</button>
+            <button class="tab-btn" data-tab="mobile">Mobile</button>
+        </div>
+
+        <div class="tab-content active" id="desktop-tab">
+            <div class="wallpapers-grid" id="desktop-wallpapers">
+                <!-- Wallpapers will be loaded here automatically -->
+                <div class="loading-message">
+                    <i class="fas fa-spinner fa-spin"></i> Loading desktop wallpapers...
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="mobile-tab">
+            <div class="wallpapers-grid" id="mobile-wallpapers">
+                <!-- Wallpapers will be loaded here automatically -->
+                <div class="loading-message">
+                    <i class="fas fa-spinner fa-spin"></i> Loading mobile wallpapers...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured" id="featured">
+        <div class="section-title">
+            <h2>Featured Wallpaper</h2>
+            <p>Randomly selected from your collection</p>
+        </div>
+
+        <div class="featured-card">
+            <div class="featured-content">
+                <h2 id="featured-title">Featured Wallpaper</h2>
+                <p id="featured-desc">A randomly selected wallpaper from your collection</p>
+                <a href="#" class="btn btn-secondary" id="featured-download">
+                    <i class="fas fa-download"></i> Download Now
+                </a>
+            </div>
+            <div class="featured-img">
+                <img id="featured-image" src="" alt="Featured Wallpaper">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>LumeScope</h3>
+                <p>We have some of the best minimal and aesthetic Wallpaper Collections.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Wallpapers</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> LumeScope. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

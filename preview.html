@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Preview | LumeScope</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .preview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .device-preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .device-frame {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .iphone-frame {
+            width: 300px;
+            height: 600px;
+            background: url('device-frames/iphone.png') center/contain no-repeat;
+            padding: 60px 25px;
+        }
+
+        .android-frame {
+            width: 300px;
+            height: 600px;
+            background: url('device-frames/android.png') center/contain no-repeat;
+            padding: 60px 25px;
+        }
+
+        .laptop-frame {
+            width: 600px;
+            height: 400px;
+            background: url('device-frames/laptop.png') center/contain no-repeat;
+            padding: 30px 80px;
+        }
+
+        .device-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .device-name {
+            text-align: center;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        .wallpaper-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .wallpaper-info h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .wallpaper-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-dark);
+        }
+
+        .download-full {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .download-full:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .related-wallpapers {
+            margin-top: 3rem;
+        }
+
+        .related-wallpapers h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .related-wallpapers h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .related-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .related-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .related-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .device-preview {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .laptop-frame {
+                width: 100%;
+                max-width: 400px;
+                height: 300px;
+                padding: 20px 50px;
+            }
+
+            .related-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <a href="index.html" class="logo">
+            <i class="fas fa-palette"></i>
+            LumeScope
+        </a>
+    </header>
+
+    <main class="preview-container">
+        <div class="device-preview" id="devicePreview">
+            <!-- Device frames will be inserted here by JavaScript -->
+        </div>
+
+        <div class="wallpaper-info">
+            <h1 id="wallpaperTitle">Wallpaper Title</h1>
+            <div class="wallpaper-meta">
+                <span><i class="fas fa-image"></i> <span id="wallpaperResolution">3840 × 2160</span></span>
+                <span><i class="fas fa-download"></i> <span id="wallpaperDownloads">0</span> downloads</span>
+                <span><i class="fas fa-calendar-alt"></i> Added <span id="wallpaperDate">today</span></span>
+            </div>
+            <p id="wallpaperDescription">A beautiful wallpaper for your devices. Perfect for both mobile and desktop
+                use.</p>
+            <a href="#" class="download-full" id="downloadFull">
+                <i class="fas fa-download"></i> Download Full Resolution
+            </a>
+        </div>
+
+        <div class="related-wallpapers">
+            <h2>Related Wallpapers</h2>
+            <div class="related-grid" id="relatedWallpapers">
+                <!-- Related wallpapers will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <script src="preview-script.js"></script>
+</body>
+
+</html>
